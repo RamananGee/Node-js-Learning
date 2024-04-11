@@ -1,0 +1,16 @@
+<h1>New to Home Page</h1>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<button onclick="getAPI()">get Rank</button>
+<button onclick="getNewRank('vijay')">get New Rank</button>
+<script>
+    function getAPI(){
+        $.get("http://localhost:8000/detailsPage/Prateesh/1").done(e => {
+            console.log(e);
+        })
+    }
+    function getNewRank(name){
+        $.get(`http://localhost/searchPage?name=${name}`).done(e => {
+            console.log(e);
+        })
+    }
+</script>
